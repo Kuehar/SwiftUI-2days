@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var outputText = "Word changed"
+    
     var body: some View {
         VStack {
-            Text("Hello, SwiftUI!!")
+            Text(outputText)
                 .fontWeight(.heavy)
                 .padding()
         
-        Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Button")/*@END_MENU_TOKEN@*/
+            Button(action: {
+            outputText = "Swift UI"
+            
+            }) {
+            Text("Dive into SwiftUI")
+                .foregroundColor(Color.white)
+                .padding(.all)
         }
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
         }
     }
 }
